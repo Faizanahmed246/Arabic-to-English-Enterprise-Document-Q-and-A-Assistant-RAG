@@ -1,0 +1,12 @@
+chromadb==1.5.9
+fastapi==0.165.0
+httpx==0.28.1
+huggingface-hub==1.33.0
+numpy==1.26.4
+onnxruntime==1.32.0
+pydantic==2.14.4
+pypdf==6.21.4
+python-docx==1.2.0
+python-dotenv==1.2.4
+tokenizers==0.23.3
+uvicorn==0.54.0

@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: bilingual-policy-rag
+    runtime: docker
+    plan: 1c-2g
+    region: frankfurt
+    numInstances: 1
+    healthCheckPath: /health
+    disk:
+      name: rag-index
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: RAG_API_KEY
+        generateValue: true
+      - key: ANTHROPIC_API_KEY
+        sync: false

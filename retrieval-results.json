@@ -1,0 +1,1278 @@
+{
+  "corpus": "synthetic bilingual policies",
+  "embedding_model": "intfloat/multilingual-e5-small",
+  "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "index_version": "e5-small-int8-614241f-v1",
+  "policy_documents": 8,
+  "indexed_chunks": 32,
+  "questions": 30,
+  "unanswerable_questions": 6,
+  "retrieval": {
+    "answerable_questions": 24,
+    "hits_at_5": 20,
+    "hit_rate_at_5_pct": 83.33,
+    "mrr_at_5": 0.7514,
+    "cross_language": {
+      "answerable_questions": 16,
+      "hits_at_5": 12,
+      "hit_rate_at_5_pct": 75.0,
+      "mrr_at_5": 0.6271
+    },
+    "same_language": {
+      "answerable_questions": 8,
+      "hits_at_5": 8,
+      "hit_rate_at_5_pct": 100.0,
+      "mrr_at_5": 1.0
+    },
+    "latency": {
+      "p50_ms": 44.73,
+      "p95_ms": 58.39
+    }
+  },
+  "answers": {
+    "requested": false,
+    "errors": 0,
+    "generated_responses": 0,
+    "answered_responses": 0,
+    "reviewed_answers": 0,
+    "faithful_answers": null,
+    "faithfulness_pct": null,
+    "answerable_coverage_pct": null,
+    "unanswerable_abstention_pct": null,
+    "total_input_tokens": null,
+    "total_output_tokens": null,
+    "end_to_end_latency": null
+  },
+  "items": [
+    {
+      "id": "q01",
+      "question": "ما درجة السفر المطلوبة للرحلات التي تستغرق أقل من ست ساعات؟",
+      "language": "ar",
+      "source_language": "en",
+      "expected_answer": "الدرجة الاقتصادية.",
+      "evidence": [
+        {
+          "source": "travel-expenses.en.md",
+          "quote": "Employees must book economy class for flights under six hours."
+        }
+      ],
+      "first_evidence_rank": 1,
+      "retrieval_ms": 64.06,
+      "retrieved": [
+        {
+          "source": "travel-expenses.en.md",
+          "location": "lines 3–6",
+          "similarity": 0.82016
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 7–10",
+          "similarity": 0.794192
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 3–6",
+          "similarity": 0.794178
+        },
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 3–6",
+          "similarity": 0.792582
+        },
+        {
+          "source": "visitor-access.ar.md",
+          "location": "lines 3–6",
+          "similarity": 0.791904
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "question": "What is the pre-tax hotel limit per night?",
+      "language": "en",
+      "source_language": "en",
+      "expected_answer": "USD 180 per night before taxes.",
+      "evidence": [
+        {
+          "source": "travel-expenses.en.md",
+          "quote": "The hotel reimbursement cap is USD 180 per night before taxes."
+        }
+      ],
+      "first_evidence_rank": 1,
+      "retrieval_ms": 50.51,
+      "retrieved": [
+        {
+          "source": "travel-expenses.en.md",
+          "location": "lines 7–10",
+          "similarity": 0.876904
+        },
+        {
+          "source": "travel-expenses.en.md",
+          "location": "lines 1–2",
+          "similarity": 0.779364
+        },
+        {
+          "source": "visitor-access.ar.md",
+          "location": "lines 3–6",
+          "similarity": 0.776697
+        },
+        {
+          "source": "travel-expenses.en.md",
+          "location": "lines 3–6",
+          "similarity": 0.776655
+        },
+        {
+          "source": "leave.en.md",
+          "location": "lines 1–2",
+          "similarity": 0.769976
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "question": "ما الموعد النهائي لتقديم مطالبة المصروفات بعد العودة من رحلة عمل؟",
+      "language": "ar",
+      "source_language": "en",
+      "expected_answer": "خلال 30 يوماً تقويمياً من العودة.",
+      "evidence": [
+        {
+          "source": "travel-expenses.en.md",
+          "quote": "Submit expense claims within 30 calendar days of returning from a business trip."
+        }
+      ],
+      "first_evidence_rank": null,
+      "retrieval_ms": 47.7,
+      "retrieved": [
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 7–10",
+          "similarity": 0.837735
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 3–6",
+          "similarity": 0.830206
+        },
+        {
+          "source": "visitor-access.ar.md",
+          "location": "lines 7–10",
+          "similarity": 0.828776
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 1–2",
+          "similarity": 0.815286
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 11–15",
+          "similarity": 0.811652
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "question": "How many days per week can eligible staff work remotely with manager approval?",
+      "language": "en",
+      "source_language": "ar",
+      "expected_answer": "Two days per week.",
+      "evidence": [
+        {
+          "source": "remote-work.ar.md",
+          "quote": "يجوز للموظف المؤهل العمل عن بُعد يومين في الأسبوع بعد موافقة مديره المباشر."
+        }
+      ],
+      "first_evidence_rank": 1,
+      "retrieval_ms": 51.42,
+      "retrieved": [
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 3–6",
+          "similarity": 0.808286
+        },
+        {
+          "source": "onboarding.en.md",
+          "location": "lines 3–6",
+          "similarity": 0.791909
+        },
+        {
+          "source": "leave.en.md",
+          "location": "lines 3–6",
+          "similarity": 0.791296
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 7–10",
+          "similarity": 0.791264
+        },
+        {
+          "source": "leave.en.md",
+          "location": "lines 11–15",
+          "similarity": 0.788125
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "question": "كم يوماً يجب أن يسبق طلب العمل عن بُعد الموعد المطلوب؟",
+      "language": "ar",
+      "source_language": "ar",
+      "expected_answer": "ثلاثة أيام عمل على الأقل.",
+      "evidence": [
+        {
+          "source": "remote-work.ar.md",
+          "quote": "يقدم الموظف طلب العمل عن بُعد قبل الموعد المطلوب بثلاثة أيام عمل على الأقل، باستخدام بوابة الموارد البشرية."
+        }
+      ],
+      "first_evidence_rank": 1,
+      "retrieval_ms": 58.39,
+      "retrieved": [
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 7–10",
+          "similarity": 0.87244
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 3–6",
+          "similarity": 0.870663
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 11–15",
+          "similarity": 0.847569
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 1–2",
+          "similarity": 0.843709
+        },
+        {
+          "source": "leave.en.md",
+          "location": "lines 3–6",
+          "similarity": 0.831716
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "question": "Who must approve a one-day work arrangement from another country?",
+      "language": "en",
+      "source_language": "ar",
+      "expected_answer": "Human Resources and Information Security must give prior approval.",
+      "evidence": [
+        {
+          "source": "remote-work.ar.md",
+          "quote": "يتطلب العمل من خارج الدولة موافقة مسبقة من الموارد البشرية وأمن المعلومات، حتى إذا كانت المدة يوماً واحداً."
+        }
+      ],
+      "first_evidence_rank": 1,
+      "retrieval_ms": 44.77,
+      "retrieved": [
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 11–15",
+          "similarity": 0.805489
+        },
+        {
+          "source": "onboarding.en.md",
+          "location": "lines 11–15",
+          "similarity": 0.797607
+        },
+        {
+          "source": "leave.en.md",
+          "location": "lines 3–6",
+          "similarity": 0.790812
+        },
+        {
+          "source": "visitor-access.ar.md",
+          "location": "lines 3–6",
+          "similarity": 0.789096
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 7–10",
+          "similarity": 0.787418
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "question": "لمن أبلغ عن حادث أمن معلومات مشتبه به، ومتى؟",
+      "language": "ar",
+      "source_language": "en",
+      "expected_answer": "يُبلّغ فريق العمليات الأمنية خلال ساعة واحدة من اكتشاف الحادث.",
+      "evidence": [
+        {
+          "source": "information-security.en.md",
+          "quote": "Suspected information security incidents must be reported to the security operations team within one hour of discovery."
+        }
+      ],
+      "first_evidence_rank": 1,
+      "retrieval_ms": 48.69,
+      "retrieved": [
+        {
+          "source": "information-security.en.md",
+          "location": "lines 3–6",
+          "similarity": 0.783595
+        },
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 1–2",
+          "similarity": 0.776949
+        },
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 11–15",
+          "similarity": 0.773546
+        },
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 7–10",
+          "similarity": 0.771516
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 11–15",
+          "similarity": 0.762228
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "question": "Which accounts and access methods require MFA?",
+      "language": "en",
+      "source_language": "en",
+      "expected_answer": "All remote access and administrative accounts.",
+      "evidence": [
+        {
+          "source": "information-security.en.md",
+          "quote": "Multifactor authentication is mandatory for all remote access and administrative accounts."
+        }
+      ],
+      "first_evidence_rank": 1,
+      "retrieval_ms": 45.53,
+      "retrieved": [
+        {
+          "source": "information-security.en.md",
+          "location": "lines 7–10",
+          "similarity": 0.844408
+        },
+        {
+          "source": "information-security.en.md",
+          "location": "lines 1–2",
+          "similarity": 0.763197
+        },
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 1–2",
+          "similarity": 0.760697
+        },
+        {
+          "source": "onboarding.en.md",
+          "location": "lines 11–15",
+          "similarity": 0.758235
+        },
+        {
+          "source": "onboarding.en.md",
+          "location": "lines 7–10",
+          "similarity": 0.756409
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "question": "ما شروط نسخ بيانات الشركة إلى وسائط تخزين قابلة للإزالة؟",
+      "language": "ar",
+      "source_language": "en",
+      "expected_answer": "أن تكون الوسائط مشفرة ومعتمدة من أمن المعلومات.",
+      "evidence": [
+        {
+          "source": "information-security.en.md",
+          "quote": "Company data may be copied to removable storage only when the device is encrypted and approved by Information Security."
+        }
+      ],
+      "first_evidence_rank": null,
+      "retrieval_ms": 51.76,
+      "retrieved": [
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 1–2",
+          "similarity": 0.809605
+        },
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 7–10",
+          "similarity": 0.803305
+        },
+        {
+          "source": "procurement.ar.md",
+          "location": "lines 7–10",
+          "similarity": 0.797152
+        },
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 11–15",
+          "similarity": 0.788811
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 11–15",
+          "similarity": 0.784109
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "question": "What competition is required for a purchase exceeding SAR 25,000?",
+      "language": "en",
+      "source_language": "ar",
+      "expected_answer": "Three written quotes from different suppliers.",
+      "evidence": [
+        {
+          "source": "procurement.ar.md",
+          "quote": "تتطلب المشتريات التي تزيد قيمتها على 25,000 ريال سعودي ثلاثة عروض أسعار مكتوبة من موردين مختلفين."
+        }
+      ],
+      "first_evidence_rank": 1,
+      "retrieval_ms": 44.01,
+      "retrieved": [
+        {
+          "source": "procurement.ar.md",
+          "location": "lines 3–6",
+          "similarity": 0.807765
+        },
+        {
+          "source": "procurement.ar.md",
+          "location": "lines 1–2",
+          "similarity": 0.765
+        },
+        {
+          "source": "procurement.ar.md",
+          "location": "lines 7–10",
+          "similarity": 0.764872
+        },
+        {
+          "source": "procurement.ar.md",
+          "location": "lines 11–15",
+          "similarity": 0.764567
+        },
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 3–6",
+          "similarity": 0.752231
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "question": "متى يجب إصدار أمر الشراء المعتمد؟",
+      "language": "ar",
+      "source_language": "ar",
+      "expected_answer": "قبل أن يبدأ المورد العمل أو يشحن البضاعة.",
+      "evidence": [
+        {
+          "source": "procurement.ar.md",
+          "quote": "يجب إصدار أمر شراء معتمد قبل أن يبدأ المورد العمل أو يشحن البضاعة."
+        }
+      ],
+      "first_evidence_rank": 1,
+      "retrieval_ms": 41.81,
+      "retrieved": [
+        {
+          "source": "procurement.ar.md",
+          "location": "lines 7–10",
+          "similarity": 0.888777
+        },
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 3–6",
+          "similarity": 0.824812
+        },
+        {
+          "source": "procurement.ar.md",
+          "location": "lines 1–2",
+          "similarity": 0.806126
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 3–6",
+          "similarity": 0.803738
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 7–10",
+          "similarity": 0.80193
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "question": "When do bid evaluation committee members declare conflicts of interest?",
+      "language": "en",
+      "source_language": "ar",
+      "expected_answer": "Before viewing supplier bids.",
+      "evidence": [
+        {
+          "source": "procurement.ar.md",
+          "quote": "يجب على كل عضو في لجنة تقييم العروض تقديم إقرار بتضارب المصالح قبل الاطلاع على عروض الموردين."
+        }
+      ],
+      "first_evidence_rank": 1,
+      "retrieval_ms": 41.9,
+      "retrieved": [
+        {
+          "source": "procurement.ar.md",
+          "location": "lines 11–15",
+          "similarity": 0.767289
+        },
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 7–10",
+          "similarity": 0.747692
+        },
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 11–15",
+          "similarity": 0.746382
+        },
+        {
+          "source": "information-security.en.md",
+          "location": "lines 3–6",
+          "similarity": 0.743581
+        },
+        {
+          "source": "procurement.ar.md",
+          "location": "lines 1–2",
+          "similarity": 0.735635
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "question": "كم يوماً يجب تقديم طلب الإجازة السنوية مقدماً عند أخذ خمسة أيام عمل متتالية؟",
+      "language": "ar",
+      "source_language": "en",
+      "expected_answer": "قبل بدء الإجازة بـ15 يوماً تقويمياً على الأقل.",
+      "evidence": [
+        {
+          "source": "leave.en.md",
+          "quote": "Requests for five or more consecutive working days of annual leave must be submitted at least 15 calendar days before the leave starts."
+        }
+      ],
+      "first_evidence_rank": 2,
+      "retrieval_ms": 52.15,
+      "retrieved": [
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 3–6",
+          "similarity": 0.848658
+        },
+        {
+          "source": "leave.en.md",
+          "location": "lines 3–6",
+          "similarity": 0.8449
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 7–10",
+          "similarity": 0.832614
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 11–15",
+          "similarity": 0.822098
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 1–2",
+          "similarity": 0.806411
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "question": "When does a sick leave absence trigger the medical certificate requirement?",
+      "language": "en",
+      "source_language": "en",
+      "expected_answer": "When it exceeds two consecutive working days.",
+      "evidence": [
+        {
+          "source": "leave.en.md",
+          "quote": "A medical certificate is required when sick leave exceeds two consecutive working days."
+        }
+      ],
+      "first_evidence_rank": 1,
+      "retrieval_ms": 44.69,
+      "retrieved": [
+        {
+          "source": "leave.en.md",
+          "location": "lines 7–10",
+          "similarity": 0.892214
+        },
+        {
+          "source": "onboarding.en.md",
+          "location": "lines 7–10",
+          "similarity": 0.797034
+        },
+        {
+          "source": "leave.en.md",
+          "location": "lines 3–6",
+          "similarity": 0.791046
+        },
+        {
+          "source": "onboarding.en.md",
+          "location": "lines 3–6",
+          "similarity": 0.778302
+        },
+        {
+          "source": "leave.en.md",
+          "location": "lines 11–15",
+          "similarity": 0.778219
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "question": "متى تنتهي صلاحية أيام الإجازة السنوية المُرحّلة؟",
+      "language": "ar",
+      "source_language": "en",
+      "expected_answer": "في 31 مارس من السنة التالية.",
+      "evidence": [
+        {
+          "source": "leave.en.md",
+          "quote": "Employees may carry forward up to five unused annual leave days."
+        }
+      ],
+      "first_evidence_rank": null,
+      "retrieval_ms": 47.47,
+      "retrieved": [
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 3–6",
+          "similarity": 0.829851
+        },
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 3–6",
+          "similarity": 0.797119
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 11–15",
+          "similarity": 0.795229
+        },
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 1–2",
+          "similarity": 0.791099
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 1–2",
+          "similarity": 0.790778
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "question": "How long do we retain supplier invoices, and when does the period start?",
+      "language": "en",
+      "source_language": "ar",
+      "expected_answer": "Seven years from the end of the financial year in which the invoice was issued.",
+      "evidence": [
+        {
+          "source": "records-retention.ar.md",
+          "quote": "تُحفظ فواتير الموردين لمدة سبع سنوات تبدأ من نهاية السنة المالية التي صدرت فيها الفاتورة."
+        }
+      ],
+      "first_evidence_rank": 5,
+      "retrieval_ms": 46.89,
+      "retrieved": [
+        {
+          "source": "travel-expenses.en.md",
+          "location": "lines 11–15",
+          "similarity": 0.832707
+        },
+        {
+          "source": "leave.en.md",
+          "location": "lines 3–6",
+          "similarity": 0.830104
+        },
+        {
+          "source": "onboarding.en.md",
+          "location": "lines 11–15",
+          "similarity": 0.822246
+        },
+        {
+          "source": "onboarding.en.md",
+          "location": "lines 3–6",
+          "similarity": 0.819391
+        },
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 3–6",
+          "similarity": 0.818963
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "question": "متى يمكن استئناف إتلاف الوثائق التي يشملها أمر حفظ قانوني؟",
+      "language": "ar",
+      "source_language": "ar",
+      "expected_answer": "بعد تلقي إذن كتابي من الإدارة القانونية.",
+      "evidence": [
+        {
+          "source": "records-retention.ar.md",
+          "quote": "يعلق فريق إدارة السجلات إتلاف الوثائق المشمولة بأمر حفظ قانوني حتى يتلقى إذناً كتابياً من الإدارة القانونية."
+        }
+      ],
+      "first_evidence_rank": 1,
+      "retrieval_ms": 44.46,
+      "retrieved": [
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 7–10",
+          "similarity": 0.857923
+        },
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 1–2",
+          "similarity": 0.820231
+        },
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 3–6",
+          "similarity": 0.815321
+        },
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 11–15",
+          "similarity": 0.812653
+        },
+        {
+          "source": "visitor-access.ar.md",
+          "location": "lines 7–10",
+          "similarity": 0.792007
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "question": "Which four fields belong in the destruction log?",
+      "language": "en",
+      "source_language": "ar",
+      "expected_answer": "Record category, destruction date, destruction method, and responsible employee name.",
+      "evidence": [
+        {
+          "source": "records-retention.ar.md",
+          "quote": "يوثق سجل الإتلاف فئة السجلات وتاريخ الإتلاف وطريقته واسم الموظف المسؤول عنه."
+        }
+      ],
+      "first_evidence_rank": 1,
+      "retrieval_ms": 39.24,
+      "retrieved": [
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 11–15",
+          "similarity": 0.759355
+        },
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 1–2",
+          "similarity": 0.758844
+        },
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 7–10",
+          "similarity": 0.744678
+        },
+        {
+          "source": "onboarding.en.md",
+          "location": "lines 1–2",
+          "similarity": 0.73497
+        },
+        {
+          "source": "information-security.en.md",
+          "location": "lines 3–6",
+          "similarity": 0.733467
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "question": "متى يجب على المدير عقد أول مراجعة موثقة لفترة التجربة؟",
+      "language": "ar",
+      "source_language": "en",
+      "expected_answer": "خلال 30 يوماً تقويمياً من تاريخ مباشرة الموظف.",
+      "evidence": [
+        {
+          "source": "onboarding.en.md",
+          "quote": "Managers must hold the first documented probation check-in within 30 calendar days of the employee’s start date."
+        }
+      ],
+      "first_evidence_rank": null,
+      "retrieval_ms": 45.11,
+      "retrieved": [
+        {
+          "source": "procurement.ar.md",
+          "location": "lines 7–10",
+          "similarity": 0.815394
+        },
+        {
+          "source": "visitor-access.ar.md",
+          "location": "lines 3–6",
+          "similarity": 0.810424
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 3–6",
+          "similarity": 0.806705
+        },
+        {
+          "source": "procurement.ar.md",
+          "location": "lines 11–15",
+          "similarity": 0.80336
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 1–2",
+          "similarity": 0.800429
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "question": "How quickly must new hires finish the two mandatory courses?",
+      "language": "en",
+      "source_language": "en",
+      "expected_answer": "Within 10 working days of their start date.",
+      "evidence": [
+        {
+          "source": "onboarding.en.md",
+          "quote": "New employees must finish the code of conduct and information security training within 10 working days of their start date."
+        }
+      ],
+      "first_evidence_rank": 1,
+      "retrieval_ms": 42.15,
+      "retrieved": [
+        {
+          "source": "onboarding.en.md",
+          "location": "lines 7–10",
+          "similarity": 0.842561
+        },
+        {
+          "source": "travel-expenses.en.md",
+          "location": "lines 3–6",
+          "similarity": 0.786756
+        },
+        {
+          "source": "leave.en.md",
+          "location": "lines 7–10",
+          "similarity": 0.785534
+        },
+        {
+          "source": "onboarding.en.md",
+          "location": "lines 3–6",
+          "similarity": 0.777893
+        },
+        {
+          "source": "leave.en.md",
+          "location": "lines 3–6",
+          "similarity": 0.776005
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "question": "ما الموعد النهائي لتأكيد استلام المعدات المخصصة للموظف الجديد؟",
+      "language": "ar",
+      "source_language": "en",
+      "expected_answer": "بحلول نهاية يوم العمل الأول.",
+      "evidence": [
+        {
+          "source": "onboarding.en.md",
+          "quote": "A new employee must acknowledge receipt of assigned equipment in the asset portal by the end of the first working day."
+        }
+      ],
+      "first_evidence_rank": 3,
+      "retrieval_ms": 42.03,
+      "retrieved": [
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 3–6",
+          "similarity": 0.838341
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 7–10",
+          "similarity": 0.832983
+        },
+        {
+          "source": "onboarding.en.md",
+          "location": "lines 11–15",
+          "similarity": 0.822888
+        },
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 7–10",
+          "similarity": 0.812684
+        },
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 11–15",
+          "similarity": 0.807018
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "question": "How far ahead must a host register a visitor?",
+      "language": "en",
+      "source_language": "ar",
+      "expected_answer": "At least one working day before the visit.",
+      "evidence": [
+        {
+          "source": "visitor-access.ar.md",
+          "quote": "يجب أن يسجل المضيف الزائر في نظام الاستقبال قبل موعد الزيارة بيوم عمل واحد على الأقل."
+        }
+      ],
+      "first_evidence_rank": 1,
+      "retrieval_ms": 40.08,
+      "retrieved": [
+        {
+          "source": "visitor-access.ar.md",
+          "location": "lines 3–6",
+          "similarity": 0.818348
+        },
+        {
+          "source": "visitor-access.ar.md",
+          "location": "lines 1–2",
+          "similarity": 0.798257
+        },
+        {
+          "source": "visitor-access.ar.md",
+          "location": "lines 7–10",
+          "similarity": 0.791939
+        },
+        {
+          "source": "onboarding.en.md",
+          "location": "lines 3–6",
+          "similarity": 0.786409
+        },
+        {
+          "source": "visitor-access.ar.md",
+          "location": "lines 11–15",
+          "similarity": 0.785563
+        }
+      ]
+    },
+    {
+      "id": "q23",
+      "question": "أين يعيد الزائر بطاقته المؤقتة؟",
+      "language": "ar",
+      "source_language": "ar",
+      "expected_answer": "إلى مكتب الاستقبال عند مغادرة المبنى.",
+      "evidence": [
+        {
+          "source": "visitor-access.ar.md",
+          "quote": "يعيد الزائر بطاقته المؤقتة إلى مكتب الاستقبال عند مغادرة المبنى."
+        }
+      ],
+      "first_evidence_rank": 1,
+      "retrieval_ms": 39.45,
+      "retrieved": [
+        {
+          "source": "visitor-access.ar.md",
+          "location": "lines 7–10",
+          "similarity": 0.877801
+        },
+        {
+          "source": "visitor-access.ar.md",
+          "location": "lines 1–2",
+          "similarity": 0.819817
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 1–2",
+          "similarity": 0.799778
+        },
+        {
+          "source": "visitor-access.ar.md",
+          "location": "lines 3–6",
+          "similarity": 0.798052
+        },
+        {
+          "source": "visitor-access.ar.md",
+          "location": "lines 11–15",
+          "similarity": 0.794461
+        }
+      ]
+    },
+    {
+      "id": "q24",
+      "question": "Who must accompany visitors while they are in restricted areas?",
+      "language": "en",
+      "source_language": "ar",
+      "expected_answer": "An authorized employee must accompany them throughout their time in a restricted area.",
+      "evidence": [
+        {
+          "source": "visitor-access.ar.md",
+          "quote": "يجب أن يرافق موظف مخول الزائر طوال فترة وجوده في أي منطقة مقيدة داخل المبنى."
+        }
+      ],
+      "first_evidence_rank": 1,
+      "retrieval_ms": 40.68,
+      "retrieved": [
+        {
+          "source": "visitor-access.ar.md",
+          "location": "lines 11–15",
+          "similarity": 0.785965
+        },
+        {
+          "source": "visitor-access.ar.md",
+          "location": "lines 3–6",
+          "similarity": 0.77939
+        },
+        {
+          "source": "visitor-access.ar.md",
+          "location": "lines 1–2",
+          "similarity": 0.777967
+        },
+        {
+          "source": "visitor-access.ar.md",
+          "location": "lines 7–10",
+          "similarity": 0.759025
+        },
+        {
+          "source": "procurement.ar.md",
+          "location": "lines 11–15",
+          "similarity": 0.751837
+        }
+      ]
+    },
+    {
+      "id": "q25",
+      "question": "What is the annual allowance for dental care?",
+      "language": "en",
+      "source_language": null,
+      "expected_answer": null,
+      "evidence": [],
+      "first_evidence_rank": null,
+      "retrieval_ms": 41.88,
+      "retrieved": [
+        {
+          "source": "onboarding.en.md",
+          "location": "lines 1–2",
+          "similarity": 0.76473
+        },
+        {
+          "source": "information-security.en.md",
+          "location": "lines 7–10",
+          "similarity": 0.764063
+        },
+        {
+          "source": "travel-expenses.en.md",
+          "location": "lines 7–10",
+          "similarity": 0.760666
+        },
+        {
+          "source": "travel-expenses.en.md",
+          "location": "lines 1–2",
+          "similarity": 0.757653
+        },
+        {
+          "source": "leave.en.md",
+          "location": "lines 3–6",
+          "similarity": 0.757336
+        }
+      ]
+    },
+    {
+      "id": "q26",
+      "question": "ما الحد الأقصى لتعويض وجبات العشاء أثناء السفر؟",
+      "language": "ar",
+      "source_language": null,
+      "expected_answer": null,
+      "evidence": [],
+      "first_evidence_rank": null,
+      "retrieval_ms": 42.29,
+      "retrieved": [
+        {
+          "source": "visitor-access.ar.md",
+          "location": "lines 7–10",
+          "similarity": 0.808933
+        },
+        {
+          "source": "visitor-access.ar.md",
+          "location": "lines 3–6",
+          "similarity": 0.804827
+        },
+        {
+          "source": "travel-expenses.en.md",
+          "location": "lines 1–2",
+          "similarity": 0.803329
+        },
+        {
+          "source": "visitor-access.ar.md",
+          "location": "lines 1–2",
+          "similarity": 0.799859
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 7–10",
+          "similarity": 0.790103
+        }
+      ]
+    },
+    {
+      "id": "q27",
+      "question": "Which HR executive signs the annual remote-work policy?",
+      "language": "en",
+      "source_language": null,
+      "expected_answer": null,
+      "evidence": [],
+      "first_evidence_rank": null,
+      "retrieval_ms": 42.44,
+      "retrieved": [
+        {
+          "source": "onboarding.en.md",
+          "location": "lines 1–2",
+          "similarity": 0.78984
+        },
+        {
+          "source": "leave.en.md",
+          "location": "lines 1–2",
+          "similarity": 0.782005
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 1–2",
+          "similarity": 0.768847
+        },
+        {
+          "source": "information-security.en.md",
+          "location": "lines 1–2",
+          "similarity": 0.763956
+        },
+        {
+          "source": "onboarding.en.md",
+          "location": "lines 7–10",
+          "similarity": 0.754947
+        }
+      ]
+    },
+    {
+      "id": "q28",
+      "question": "ما عدد أيام الإجازة السنوية الممنوحة للموظف بدوام كامل؟",
+      "language": "ar",
+      "source_language": null,
+      "expected_answer": null,
+      "evidence": [],
+      "first_evidence_rank": null,
+      "retrieval_ms": 48.74,
+      "retrieved": [
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 3–6",
+          "similarity": 0.841333
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 7–10",
+          "similarity": 0.79104
+        },
+        {
+          "source": "leave.en.md",
+          "location": "lines 11–15",
+          "similarity": 0.788239
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 11–15",
+          "similarity": 0.78801
+        },
+        {
+          "source": "leave.en.md",
+          "location": "lines 1–2",
+          "similarity": 0.785013
+        }
+      ]
+    },
+    {
+      "id": "q29",
+      "question": "Which encryption algorithm must approved removable drives use?",
+      "language": "en",
+      "source_language": null,
+      "expected_answer": null,
+      "evidence": [],
+      "first_evidence_rank": null,
+      "retrieval_ms": 42.04,
+      "retrieved": [
+        {
+          "source": "information-security.en.md",
+          "location": "lines 11–15",
+          "similarity": 0.847561
+        },
+        {
+          "source": "information-security.en.md",
+          "location": "lines 7–10",
+          "similarity": 0.782432
+        },
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 1–2",
+          "similarity": 0.764696
+        },
+        {
+          "source": "information-security.en.md",
+          "location": "lines 1–2",
+          "similarity": 0.762098
+        },
+        {
+          "source": "onboarding.en.md",
+          "location": "lines 1–2",
+          "similarity": 0.749096
+        }
+      ]
+    },
+    {
+      "id": "q30",
+      "question": "كم سنة تُحفظ سجلات مقابلات التوظيف للمرشحين غير المقبولين؟",
+      "language": "ar",
+      "source_language": null,
+      "expected_answer": null,
+      "evidence": [],
+      "first_evidence_rank": null,
+      "retrieval_ms": 47.39,
+      "retrieved": [
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 3–6",
+          "similarity": 0.815298
+        },
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 1–2",
+          "similarity": 0.815241
+        },
+        {
+          "source": "records-retention.ar.md",
+          "location": "lines 11–15",
+          "similarity": 0.798001
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 7–10",
+          "similarity": 0.790023
+        },
+        {
+          "source": "remote-work.ar.md",
+          "location": "lines 3–6",
+          "similarity": 0.785708
+        }
+      ]
+    }
+  ]
+}
